@@ -4,8 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>فناوری اطلاعات سلامت | HIT</title>
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
 <style>
+@font-face {
+    font-family: 'Vazirmatn';
+    src: url('Vazirmatn-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vazirmatn';
+    src: url('Vazirmatn-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -16,28 +30,25 @@
 body {
     background: #f5f5f5;
     color: #1f1f1f;
-    font-family: 'Vazirmatn', sans-serif;
     line-height: 1.8;
 }
 
-/* بخش هدر بزرگ - مشکی */
+/* هدر */
 .hero {
-    background: #111111;
-    color: white;
-    padding: 60px 15px;
+    background: #111;
+    color: #fff;
+    padding: 50px 15px;
     text-align: center;
 }
 
 .hero h1 {
-    font-size: 2.2rem;
-    font-weight: 800;
-    margin-bottom: 12px;
-    color: white;
+    font-size: 2rem;
+    font-weight: 700;
 }
 
 .hero p {
     font-size: 1rem;
-    color: #cccccc;
+    color: #ccc;
     max-width: 650px;
     margin: auto;
 }
@@ -45,214 +56,142 @@ body {
 .container {
     max-width: 750px;
     margin: auto;
-    padding: 30px 20px;
+    padding: 25px 15px;
 }
 
-/* کادرهای اصلی - سفید */
 .card {
-    background: white;
-    border-right: 5px solid #444;  /* border-right برای راست‌چین */
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-    padding: 28px 30px;
-    margin-bottom: 28px;
+    background: #fff;
+    border-right: 5px solid #444;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    padding: 22px;
+    margin-bottom: 20px;
     border-radius: 12px;
-    color: #1f1f1f;
 }
 
 .card h2 {
-    font-size: 1.55rem;
-    margin-bottom: 18px;
-    color: #111111;
-    font-weight: 800;
-    padding-right: 16px;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    font-weight: 700;
 }
 
 .card p {
     text-align: justify;
-    color: #1f1f1f;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
-/* شبکه کادرهای فرعی */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-    gap: 22px;
-    margin-top: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 15px;
 }
 
-/* کادرهای فرعی - طوسی تیره #2a2a2a با متن سفید */
 .item {
     background: #2a2a2a;
-    color: white;
-    padding: 20px;
-    border-radius: 12px;
-    transition: all 0.2s;
-}
-
-.item:hover {
-    background: #3a3a3a;
-    transform: translateY(-2px);
+    color: #fff;
+    padding: 18px;
+    border-radius: 10px;
 }
 
 .item h3 {
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-    color: white;
-    font-weight: 800;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
 }
 
 .item p {
-    color: #dddddd;
-    line-height: 1.6;
+    color: #ddd;
+    font-size: 0.95rem;
 }
 
-/* لیست‌ها */
 ul {
-    padding-right: 25px;
-    list-style-type: none;
+    list-style: none;
+    padding-right: 20px;
 }
 
 li {
-    margin-bottom: 12px;
-    color: #1f1f1f;
+    margin-bottom: 10px;
     position: relative;
-    padding-right: 24px;
+    padding-right: 18px;
 }
 
 li::before {
     content: "●";
-    color: #444;
-    font-weight: bold;
     position: absolute;
     right: 0;
-    top: 0;
+    color: #444;
 }
 
-/* نشانگر بالای هدر */
 .badge {
-    display: inline-block;
     background: #2a2a2a;
-    padding: 6px 20px;
-    border-radius: 50px;
-    margin-bottom: 20px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: white;
+    color: #fff;
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    display: inline-block;
+    margin-bottom: 15px;
 }
 
-/* فوتر - مشکی */
 .footer {
-    background: #111111;
-    color: white;
-    padding: 28px 20px;
+    background: #111;
+    color: #fff;
     text-align: center;
-    font-size: 0.9rem;
-    margin-top: 25px;
-}
-
-/* ریسپانسیو */
-@media (max-width: 640px) {
-    .hero h1 { font-size: 1.8rem; }
-    .card { padding: 20px; }
-    .card h2 { font-size: 1.3rem; }
-    .grid { grid-template-columns: 1fr; }
+    padding: 20px;
+    font-size: 0.85rem;
 }
 </style>
 </head>
+
 <body>
 
 <section class="hero">
-    <div class="badge">
-        معرفی رشته دانشگاهی
-    </div>
+    <div class="badge">معرفی رشته دانشگاهی</div>
     <h1>فناوری اطلاعات سلامت</h1>
-    <p>
-        ترکیب دانش سلامت، فناوری اطلاعات و تحلیل داده برای ساخت آینده هوشمند نظام سلامت
-    </p>
+    <p>ترکیب دانش سلامت، فناوری اطلاعات و تحلیل داده برای آینده هوشمند سلامت</p>
 </section>
 
 <div class="container">
+
     <div class="card">
         <h2>معرفی رشته</h2>
-        <p>
-            فناوری اطلاعات سلامت (Health Information Technology) یکی از رشته‌های نوین علوم پزشکی است که در محل تلاقی فناوری اطلاعات، مدیریت و علوم سلامت قرار دارد. این رشته با هدف جمع‌آوری، سازماندهی، ذخیره‌سازی، تحلیل و مدیریت اطلاعات سلامت بیماران و مراکز درمانی ایجاد شده است.
-        </p>
-        <br>
-        <p>
-            دانشجویان این رشته با مباحثی همچون پرونده الکترونیک سلامت، سیستم‌های اطلاعات بیمارستانی، مدیریت داده‌های درمانی، امنیت اطلاعات سلامت، هوش مصنوعی در پزشکی و تحلیل داده‌های سلامت آشنا می‌شوند و می‌آموزند چگونه از فناوری برای ارتقای کیفیت خدمات درمانی و تصمیم‌گیری‌های پزشکی استفاده کنند.
-        </p>
-        <br>
-        <p>
-            با رشد روزافزون سلامت دیجیتال، پزشکی از راه دور، کلان‌داده‌های سلامت و هوش مصنوعی، نیاز به متخصصان این حوزه در بیمارستان‌ها، مراکز درمانی، سازمان‌های بیمه‌گر، شرکت‌های فناوری سلامت و مراکز پژوهشی روزبه‌روز در حال افزایش است.
-        </p>
+        <p>فناوری اطلاعات سلامت رشته‌ای میان‌رشته‌ای بین پزشکی و IT است...</p>
+        <p>هدف آن مدیریت و تحلیل داده‌های سلامت و بیمارستانی است.</p>
     </div>
 
     <div class="card">
         <h2>حوزه‌های آموزشی</h2>
         <div class="grid">
             <div class="item">
-                <h3>سیستم‌های اطلاعات بیمارستانی</h3>
-                <p>طراحی، پیاده‌سازی و ارزیابی سامانه‌های اطلاعاتی مراکز درمانی</p>
+                <h3>سیستم‌های بیمارستانی</h3>
+                <p>طراحی و مدیریت HIS</p>
             </div>
             <div class="item">
-                <h3>هوش مصنوعی در سلامت</h3>
-                <p>کمک به تشخیص بیماری‌ها و پشتیبانی از تصمیم‌گیری پزشکی</p>
+                <h3>هوش مصنوعی</h3>
+                <p>کمک به تشخیص پزشکی</p>
             </div>
             <div class="item">
-                <h3>امنیت اطلاعات سلامت</h3>
-                <p>حفاظت از اطلاعات بیماران و حفظ محرمانگی داده‌های پزشکی</p>
+                <h3>امنیت اطلاعات</h3>
+                <p>حفاظت از داده‌های بیماران</p>
             </div>
             <div class="item">
-                <h3>تحلیل داده‌های سلامت</h3>
-                <p>داده‌کاوی، تحلیل آماری و استخراج دانش از اطلاعات پزشکی</p>
+                <h3>تحلیل داده</h3>
+                <p>داده‌کاوی سلامت</p>
             </div>
         </div>
     </div>
 
     <div class="card">
-        <h2>مهارت‌هایی که کسب می‌کنید</h2>
+        <h2>مهارت‌ها</h2>
         <ul>
-            <li>مدیریت و سازماندهی اطلاعات سلامت</li>
-            <li>کار با سیستم‌های اطلاعات بیمارستانی (HIS)</li>
-            <li>تحلیل داده‌های پزشکی و سلامت</li>
-            <li>آشنایی با هوش مصنوعی در پزشکی</li>
-            <li>مدیریت پرونده الکترونیک سلامت</li>
-            <li>حفظ امنیت و محرمانگی اطلاعات بیماران</li>
-            <li>آشنایی با استانداردهای تبادل اطلاعات سلامت</li>
-            <li>کار با نرم‌افزارهای تخصصی حوزه سلامت</li>
+            <li>مدیریت اطلاعات سلامت</li>
+            <li>تحلیل داده‌های پزشکی</li>
+            <li>کار با HIS</li>
+            <li>امنیت اطلاعات بیمار</li>
         </ul>
     </div>
 
-    <div class="card">
-        <h2>فرصت‌های شغلی</h2>
-        <ul>
-            <li>کارشناس فناوری اطلاعات سلامت</li>
-            <li>مدیر سیستم‌های اطلاعات بیمارستانی</li>
-            <li>کارشناس پرونده الکترونیک سلامت</li>
-            <li>تحلیلگر داده‌های سلامت</li>
-            <li>کارشناس مدیریت اطلاعات پزشکی</li>
-            <li>پژوهشگر سلامت دیجیتال</li>
-            <li>مشاور تحول دیجیتال در نظام سلامت</li>
-            <li>همکاری با شرکت‌های تولیدکننده نرم‌افزارهای پزشکی</li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <h2>چرا فناوری اطلاعات سلامت؟</h2>
-        <p>
-            دنیای امروز به سمت دیجیتالی شدن خدمات سلامت حرکت می‌کند. بیمارستان‌های هوشمند، پرونده‌های الکترونیک سلامت، اپلیکیشن‌های پزشکی، سلامت از راه دور و هوش مصنوعی، همگی به متخصصانی نیاز دارند که بتوانند میان دانش سلامت و فناوری ارتباط برقرار کنند.
-        </p>
-        <br>
-        <p>
-            فناوری اطلاعات سلامت یکی از رشته‌های آینده‌دار علوم پزشکی است که فرصت فعالیت در حوزه‌های مدیریتی، فناوری، پژوهشی و آموزشی را فراهم می‌کند و نقش مهمی در بهبود کیفیت خدمات درمانی و افزایش رضایت بیماران دارد.
-        </p>
-    </div>
 </div>
 
 <footer class="footer">
-    دانشکده مدیریت و اطلاع‌رسانی پزشکی<br>
-    رشته فناوری اطلاعات سلامت (HIT)
+    دانشکده مدیریت و اطلاع‌رسانی پزشکی - HIT
 </footer>
 
 </body>
